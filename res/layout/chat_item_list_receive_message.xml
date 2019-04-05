@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackgroundDark">
+
+    <ImageView
+        android:id="@+id/receive_background_imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="18dp"
+        android:paddingRight="98dp"
+        android:src="@drawable/rectangle_chat_bubble_red"
+        app:layout_constraintBottom_toBottomOf="@+id/receive_text_textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/receive_text_textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/receive_text_textView"
+        app:layout_constraintLeft_toLeftOf="@+id/receive_background_imageView">
+
+        <TextView
+            android:id="@+id/won_text"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginLeft="-10dp"
+            android:background="@color/colorRedDark"
+            android:rotation="45" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/receive_text_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:paddingBottom="7dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="118dp"
+        android:paddingTop="14dp"
+        android:text="@string/app_name"
+        app:layout_constraintLeft_toLeftOf="@+id/receive_background_imageView" />
+    <TextView
+            android:id="@+id/receive_time_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="12:12"
+            android:textColor="@color/colorGrayChat"
+            android:paddingLeft="38dp"
+            app:layout_constraintTop_toBottomOf="@+id/receive_text_textView"/>
+</android.support.constraint.ConstraintLayout>
